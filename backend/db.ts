@@ -11,7 +11,12 @@ export function getDb(): Knex {
   if (!dbInstance) {
     dbInstance = knex({
       client: 'pg',
-      connection: NotificationServiceDB.connectionString,
+      connection: {
+        connectionString: NotificationServiceDB.connectionString,
+        ssl: {
+          rejectUnauthorized: false,
+        },
+      },
     });
   }
 
