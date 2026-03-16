@@ -218,26 +218,27 @@ bun run build:cli
 
 - Flag: `--api-url=http://localhost:4000`
 - Or .env: `NOTIFY_API_URL=http://localhost:4000`
-
+- Deployed version: https://staging-encore-notification-service-ppbi.encr.app
+- A Postman collection is included under `/postman` for quick API testing.
 ### Example commands
 
 ```bash
 Create User: 
-./notify users:create --name "Alice" --email "alice@example.com" 
+./notify users:create --name "Alice" --email "alice@example.com" --api-url https://staging-encore-notification-service-ppbi.encr.app
 
 List Users:
-./notify users:list 
+./notify users:list --api-url https://staging-encore-notification-service-ppbi.encr.app
 
-./notify send --user-id 1 --channel in_app --title "Hello" --body "Welcome!" 
+./notify send --user-id 1 --channel in_app --title "Hello" --body "Welcome!" --api-url https://staging-encore-notification-service-ppbi.encr.app
 
 List Notifications:
-./notify list --user-id 1 --page 1 --limit 10
+./notify list --user-id 1 --page 1 --limit 10 --api-url https://staging-encore-notification-service-ppbi.encr.app
 
 List Unread Notifications:
-./notify unread --user-id 1 --page 1 --limit 10
+./notify unread --user-id 1 --page 1 --limit 10 --api-url https://staging-encore-notification-service-ppbi.encr.app
 
 Mark as Read:
-./notify read --id 1
+./notify read --id 1 --api-url https://staging-encore-notification-service-ppbi.encr.app
 ```
 ---
 
