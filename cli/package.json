@@ -1,0 +1,16 @@
+{
+  "name": "notify-cli",
+  "private": true,
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "build:cli": "bun build src/cli.ts --compile --outfile notify.exe"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "dotenv": "^16.6.1"
+  }
+}
